@@ -26,6 +26,6 @@ export class userService {
     return this.http.put(`${this.apiUrl}/edituser`, user)
   }
   deleteUser(user:any) : Observable<any> {
-    return this.http.post(`${this.apiUrl}/deleteuser`, user)
+    return this.http.delete(`${this.apiUrl}/deleteuser/${user}`);
   }
 }

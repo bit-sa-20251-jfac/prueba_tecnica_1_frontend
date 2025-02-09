@@ -13,7 +13,7 @@ export const routes: Routes = [{
     component: ListUsersComponent
 },
 {
-    title:'Monsters Log In',
+    title:'Log In',
     path: 'log-in',
     component: LoginComponent
 },

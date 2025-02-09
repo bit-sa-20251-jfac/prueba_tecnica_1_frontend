@@ -17,9 +17,10 @@ export class DeleteComponent {
     constructor(private userService: userService){}
   
     deleteUser(): void{
-      this.userService.deleteUser({username:this.username, password:this.password}).subscribe({
+      this.userService.deleteUser(this.username).subscribe({
         next:(response) =>{
           console.log(response);
+          alert ("Usuario eliminado exitosamente")
           this.username = '';
           this.password = '';
         },

@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 export class BuscarUserComponent {
 
   username : string = '';
-  user: any = {username:"", password:""};
+  user: any = {username:"", id:""};
 
   constructor(private userService: userService) {}
 
@@ -22,6 +22,8 @@ export class BuscarUserComponent {
     this.userService.findUser(this.username).subscribe({
       next:(response) =>{
         console.log(response);
+        this.user.username = response.usuario; 
+        this.user.id = response.id;
         this.username = '';
       },
       error:(response) =>{

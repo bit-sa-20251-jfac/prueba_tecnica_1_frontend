@@ -20,6 +20,7 @@ export class EditUserComponent {
     this.userService.editUser({username:this.username, password:this.password}).subscribe({
       next:(response) =>{
         console.log(response);
+        alert ("Contraseña actualizada")
         this.username = '';
         this.password = '';
       },

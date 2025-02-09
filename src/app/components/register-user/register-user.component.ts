@@ -19,6 +19,7 @@ export class RegisterUserComponent {
     this.userService.createUser({username:this.username, password:this.password}).subscribe({
       next:(response) =>{
         console.log(response);
+        alert("usuario registrado")
         this.username = '';
         this.password = '';
       },
