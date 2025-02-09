@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Create an account</h2>
+        <form id="registroForm">
+            <label for="nombre">Username:</label>
+            <input type="text" [(ngModel)]="username" id="nombre" name="nombre" required>
+
+            <label for="contraseña">Password:</label>
+            <input type="password" [(ngModel)]="password" id="contraseña" name="contraseña" required>
+
+            <button (click)="register()" type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

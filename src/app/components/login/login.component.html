@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsters Log In</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Monsters</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input [(ngModel)]="username" type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input [(ngModel)]="password" type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button (click)="userLogin()" type="submit">Log In</button>
+            </div>
+        </form>
+        <div class="create-account">
+            <button onclick="window.location.href='registro.html'">Create an account</button>
+        </div>
+    </div>
+</body>
+</html>

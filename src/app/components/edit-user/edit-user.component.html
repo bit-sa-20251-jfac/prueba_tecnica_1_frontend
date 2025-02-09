@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuarios</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Update User</h2>
+        <form id="editarForm">
+            <label for="nombre">Username:</label>
+            <input [(ngModel)]="username"type="text" id="nombre" name="nombre" required>
+
+
+            <label for="contraseña">Password:</label>
+            <input [(ngModel)]="password"type="password" id="contraseña" name="contraseña">
+
+            <button (click)="editUser()" type="submit">Guardar Cambios</button>
+        </form>
+    </div>
+</body>
+</html>
