@@ -16,9 +16,14 @@
         </div>
 
         <div>
-            <label for="contraseña" class="block text-sm font-medium text-gray-600">Password:</label>
-            <input [(ngModel)]="password" type="password" id="contraseña" name="contraseña"
+            <label for="contraseña" class="block text-sm font-medium text-gray-600">Estado del envio:</label>
+            <input [(ngModel)]="estado_de_envio" type="text" id="contraseña" name="contraseña" list="estado_de_envioList" autocomplete="off" autocorrect="off" spellcheck="false"
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <datalist id="estado_de_envioList">
+                    <option value="Pendiente"></option>
+                    <option value="En progreso"></option>
+                    <option value="Entregado"></option>
+                </datalist>
         </div>
 
         <button (click)="editUser()" type="submit"

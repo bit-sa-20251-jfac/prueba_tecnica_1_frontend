@@ -1,8 +1,20 @@
-<ul *ngFor="let user of users" class="space-y-2">
-    <li class="border border-gray-300 bg-gray-100 p-4 rounded-lg shadow-sm">
-        <span class="font-semibold text-gray-700">ID:</span> {{ user._id }}
-    </li>
-    <li class="border border-gray-300 bg-gray-100 p-4 rounded-lg shadow-sm">
-        <span class="font-semibold text-gray-700">Username:</span> {{ user.username }}
-    </li>
-</ul>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="flex flex-wrap justify-center gap-6">
+    <div *ngFor="let user of users" class="bg-white shadow-lg rounded-xl p-6 border border-gray-200 w-80 text-center">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">Cliente: {{ user.username }}</h2>
+        <ul class="space-y-2">
+            <li><span class="font-semibold text-gray-700">ID:</span> {{ user._id }}</li>
+            <li><span class="font-semibold text-gray-700">Pedidos:</span> {{ user.pedidos }}</li>
+            <li><span class="font-semibold text-gray-700">Productos:</span> {{ user.productos }}</li>
+            <li><span class="font-semibold text-gray-700">Categoria:</span> {{ user.categorias }}</li>
+            <li><span class="font-semibold text-gray-700">Transportistas:</span> {{ user.transportistas }}</li>
+            <li><span class="font-semibold text-gray-700">Rutas:</span> {{ user.rutas }}</li>
+            <li><span class="font-semibold text-gray-700">Estado de Envío:</span> {{ user.estado_de_envio }}</li>
+
+        </ul>
+    </div>
+</div>

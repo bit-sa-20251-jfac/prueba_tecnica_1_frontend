@@ -1,25 +1,109 @@
-<Br>
-<Br>
-    <Br>
-        <Br>
+<br>
+<br>
+<br>
+<br>
 <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-    <h2 class="text-2xl font-semibold text-gray-700 mb-4 text-center">Create an account</h2>
+    <h2 class="text-2xl font-semibold text-gray-700 mb-4 text-center">Nuevos pedidos</h2>
     <form id="registroForm" class="space-y-4">
+
         <div>
-            <label for="nombre" class="block text-sm font-medium text-gray-600">Username:</label>
-            <input type="text" [(ngModel)]="username" id="nombre" name="nombre" required
+            <label for="username" class="block text-sm font-medium text-gray-600">Cliente:</label>
+            <input type="text" [(ngModel)]="username" id="username" name="username" required
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
         </div>
 
-        <div>
-            <label for="contraseña" class="block text-sm font-medium text-gray-600">Password:</label>
-            <input type="password" [(ngModel)]="password" id="contraseña" name="contraseña" required
+       <div>
+            <label for="password" class="block text-sm font-medium text-gray-600">Password:</label>
+            <input type="password" [(ngModel)]="password" id="password" name="password" required
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+        </div> 
+
+    
+
+        <div>
+            <label for="pedidos" class="block text-sm font-medium text-gray-600">Pedidos:</label>
+            <input type="text" [(ngModel)]="pedidos" id="pedidos" name="pedidos" list="pedidosList" autocomplete="off" autocorrect="off" spellcheck="false"
+                class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <datalist id="pedidosList">
+                    <option value="En preparación 0%"></option> 
+                    <option value="En almacén 25%"></option>
+                    <option value="En tránsito 50%"></option>
+                    <option value="En tu zona para distribución 75%"></option>
+                    <option value="Entregado 100%"></option>
+                </datalist>
         </div>
 
-        <button (click)="register()" type="submit"
+        <div>
+            <label for="categorias" class="block text-sm font-medium text-gray-600">Categoria:</label>
+            <input type="text" [(ngModel)]="categorias" id="categorias" name="categorias" list="categoriasList" autocomplete="off" autocorrect="off" spellcheck="false"
+                class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <datalist id="categoriasList">
+                    <option value="Arte y artesanias"></option>
+                    <option value="Automotriz"></option>
+                    <option value="Bebe"></option>
+                    <option value="Belleza y cuidado personal"></option>
+                    <option value="Cine y TV"></option>
+                    <option value="Computadoras"></option>
+                    <option value="Deportes y actividades al aire libre"></option>
+                    <option value="Electronicos"></option>
+                    <option value="Equipaje"></option>
+                    <option value="Herramientas y mejoramiento del hogar"></option>
+                    <option value="Hogar y cocina"></option>
+                    <option value="Industrial y cientifico"></option>
+                    <option value="Insumos para mascotas"></option>
+                    <option value="Juguetes y juegos"></option>
+                    <option value="Libros"></option>
+                    <option value="Moda de niñas"></option>
+                    <option value="Moda de niños"></option>
+                    <option value="Moda para Hombre"></option>
+                    <option value="Moda para Mujer"></option>
+                    </datalist>
+        </div>
+        <div>
+            <label for="productos" class="block text-sm font-medium text-gray-600">Productos:</label>
+            <input type="text" [(ngModel)]="productos" id="productos" name="productos" list="productosList" autocomplete="off" autocorrect="off" spellcheck="false"
+                class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+               
+        </div>
+        
+
+        <div>
+            <label for="transportistas" class="block text-sm font-medium text-gray-600">Transportistas:</label>
+            <input type="text" [(ngModel)]="transportistas" id="transportistas" name="transportistas" list="transportistasList" autocomplete="off" autocorrect="off" spellcheck="false"
+                class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <datalist id="transportistasList">
+                    <option value="SERVIENTREGA"></option>
+                    <option value="FEDEX"></option>
+                    <option value="UPS"></option>
+                </datalist>
+        </div>
+
+        <div>
+            <label for="rutas" class="block text-sm font-medium text-gray-600">Rutas:</label>
+            <input type="text" [(ngModel)]="rutas" id="rutas" name="rutas" list="rutasList" autocomplete="off" autocorrect="off" spellcheck="false"
+                class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <datalist id="rutasList">
+                    <option value="BOG-MED"></option>  
+                    <option value="BOG-NYC"></option>
+                    <option value="MED-BOG"></option>
+                </datalist>
+        </div>
+
+        <div>
+            <label for="estado_de_envio" class="block text-sm font-medium text-gray-600">Estado de envío:</label>
+            <input type="text" [(ngModel)]="estado_de_envio" id="estado_de_envio" name="estado_de_envio" list="estado_de_envioList" autocomplete="off" autocorrect="off" spellcheck="false"
+                class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                <datalist id="estado_de_envioList">
+                    <option value="EN RUTA"></option>
+                    <option value="ENTREGADO"></option>
+                    <option value="PENDIENTE"></option>
+                </datalist>
+        </div>
+
+        <button (click)="register()" type="button"
             class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
             Register
         </button>
     </form>
 </div>
+
