@@ -3,32 +3,31 @@
         <Br>
             <Br>
                 <Br>
-                    <Br>
-                        
+                    
 
 <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-    <h2 class="text-2xl font-semibold text-gray-700 mb-4 text-center">Encuentra tu pedido</h2>
-    <form id="buscarForm" class="space-y-4">
-        <div>
-            <label for="nombre" class="block text-sm font-medium text-gray-600">Nombre usuario:</label>
-            <input [(ngModel)]="username" type="text" id="nombre" name="nombre" required
-                class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-        </div>
-
-        <button (click)="findUser()" type="submit"
-            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
-            Buscar
-        </button>
-    </form>
-
-    <div class="mt-4 p-4 bg-gray-100 rounded-lg shadow-sm text-gray-700" id="resultados" *ngIf="user">
-        <p><span class="font-semibold">Cliente:</span> {{ user.username }}</p>
-        <p><span class="font-semibold">ID:</span> {{ user.id }}</p>
-        <p><span class="font-semibold">pedidos:</span> {{ user.pedidos }}</p>
-        <p><span class="font-semibold">Categorias:</span> {{ user.categorias }}</p>
-        <p><span class="font-semibold">productos:</span> {{ user.productos }}</p>
-        <p><span class="font-semibold">transportistas:</span> {{ user.transportistas }}</p>
-        <p><span class="font-semibold">rutas:</span> {{ user.rutas }}</p>
-        <p><span class="font-semibold">estado del envio:</span> {{ user.estado_de_envio }}</p>
+<h2 class="text-2xl font-semibold text-gray-700 mb-4 text-center">Encuentra tu pedido</h2>
+<form id="buscarForm" class="space-y-4">
+    <div>
+        <label for="nombre" class="block text-sm font-medium text-gray-600">Nombre usuario:</label>
+        <input [(ngModel)]="username" type="text" id="nombre" name="nombre" required  placeholder="Ingresar nombre"
+            class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
     </div>
+
+    <button (click)="findUser()" type="submit"
+        class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+        Buscar
+    </button>
+</form>
+
+<div class="mt-4 p-4 bg-gray-100 rounded-lg shadow-sm text-gray-700" id="resultados" *ngIf="user">
+    <p><span class="font-semibold">Cliente:</span> {{ user.username }}</p>
+    <p><span class="font-semibold">ID:</span> {{ user.id }}</p>
+    <p><span class="font-semibold">pedidos:</span> {{ user.pedidos }}</p>
+    <p><span class="font-semibold">Categorias:</span> {{ user.categorias }}</p>
+    <p><span class="font-semibold">productos:</span> {{ user.productos }}</p>
+    <p><span class="font-semibold">transportistas:</span> {{ user.transportistas }}</p>
+    <p><span class="font-semibold">rutas:</span> {{ user.rutas }}</p>
+    <p><span class="font-semibold">estado del envio:</span> {{ user.estado_de_envio }}</p>
+   </div>
 </div>

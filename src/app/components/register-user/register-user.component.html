@@ -8,13 +8,13 @@
 
         <div>
             <label for="username" class="block text-sm font-medium text-gray-600">Cliente:</label>
-            <input type="text" [(ngModel)]="username" id="username" name="username" required
+            <input type="text" [(ngModel)]="username" id="username" name="username" required placeholder="Ingresa el nombre del cliente"
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
         </div>
 
        <div>
             <label for="password" class="block text-sm font-medium text-gray-600">Password:</label>
-            <input type="password" [(ngModel)]="password" id="password" name="password" required
+            <input type="password" [(ngModel)]="password" id="password" name="password" required placeholder="Ingresa la contraseña"
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
         </div> 
 
@@ -22,7 +22,7 @@
 
         <div>
             <label for="pedidos" class="block text-sm font-medium text-gray-600">Pedidos:</label>
-            <input type="text" [(ngModel)]="pedidos" id="pedidos" name="pedidos" list="pedidosList" autocomplete="off" autocorrect="off" spellcheck="false"
+            <input type="text" [(ngModel)]="pedidos" id="pedidos" name="pedidos" placeholder="Selecciona el estado del pedido" list="pedidosList" autocomplete="off" autocorrect="off" spellcheck="false"
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
                 <datalist id="pedidosList">
                     <option value="En preparación 0%"></option> 
@@ -35,7 +35,7 @@
 
         <div>
             <label for="categorias" class="block text-sm font-medium text-gray-600">Categoria:</label>
-            <input type="text" [(ngModel)]="categorias" id="categorias" name="categorias" list="categoriasList" autocomplete="off" autocorrect="off" spellcheck="false"
+            <input type="text" [(ngModel)]="categorias" id="categorias" name="categorias"  placeholder="Selecciona la categoría" list="categoriasList" autocomplete="off" autocorrect="off" spellcheck="false"
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
                 <datalist id="categoriasList">
                     <option value="Arte y artesanias"></option>
@@ -61,7 +61,7 @@
         </div>
         <div>
             <label for="productos" class="block text-sm font-medium text-gray-600">Productos:</label>
-            <input type="text" [(ngModel)]="productos" id="productos" name="productos" list="productosList" autocomplete="off" autocorrect="off" spellcheck="false"
+            <input type="text" [(ngModel)]="productos" id="productos" name="productos"  placeholder="Ingresa un producto" list="productosList" autocomplete="off" autocorrect="off" spellcheck="false"
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
                
         </div>
@@ -69,7 +69,7 @@
 
         <div>
             <label for="transportistas" class="block text-sm font-medium text-gray-600">Transportistas:</label>
-            <input type="text" [(ngModel)]="transportistas" id="transportistas" name="transportistas" list="transportistasList" autocomplete="off" autocorrect="off" spellcheck="false"
+            <input type="text" [(ngModel)]="transportistas" id="transportistas" name="transportistas"placeholder="Selecciona el transportista"  list="transportistasList" autocomplete="off" autocorrect="off" spellcheck="false"
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
                 <datalist id="transportistasList">
                     <option value="SERVIENTREGA"></option>
@@ -80,7 +80,7 @@
 
         <div>
             <label for="rutas" class="block text-sm font-medium text-gray-600">Rutas:</label>
-            <input type="text" [(ngModel)]="rutas" id="rutas" name="rutas" list="rutasList" autocomplete="off" autocorrect="off" spellcheck="false"
+            <input type="text" [(ngModel)]="rutas" id="rutas" name="rutas"  placeholder="Selecciona la ruta" list="rutasList" autocomplete="off" autocorrect="off" spellcheck="false"
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
                 <datalist id="rutasList">
                     <option value="BOG-MED"></option>  
@@ -91,7 +91,7 @@
 
         <div>
             <label for="estado_de_envio" class="block text-sm font-medium text-gray-600">Estado de envío:</label>
-            <input type="text" [(ngModel)]="estado_de_envio" id="estado_de_envio" name="estado_de_envio" list="estado_de_envioList" autocomplete="off" autocorrect="off" spellcheck="false"
+            <input type="text" [(ngModel)]="estado_de_envio" id="estado_de_envio" name="estado_de_envio"    placeholder="Selecciona el estado de envío" list="estado_de_envioList" autocomplete="off" autocorrect="off" spellcheck="false"
                 class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
                 <datalist id="estado_de_envioList">
                     <option value="EN RUTA"></option>
@@ -104,6 +104,5 @@
             class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
             Register
         </button>
-    </form>
+    </form>
 </div>
-

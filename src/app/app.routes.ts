@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
 import { ListUsersComponent } from './components/list-users/list-users.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
@@ -12,6 +13,12 @@ export const routes: Routes = [{
     path: 'list-users',
     component: ListUsersComponent
 },
+{
+    path: '',
+    component: HomeComponent,
+    title: 'Home'
+  },
+
 {
     title:'Log In',
     path: 'log-in',
