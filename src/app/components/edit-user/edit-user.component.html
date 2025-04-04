@@ -1,35 +1,41 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
-    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Actualiza el estado de tu pedido</h2>
-    <form id="editarForm" class="space-y-4">
-        <div>
-            <label for="nombre" class="block text-sm font-medium text-gray-600">Cliente:</label>
-            <input [(ngModel)]="username" type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre del usuario"
-                class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
-                required>
-        </div>
+<br>
+<br>
+<article class= "bg-black card">
+    <div class="max-w-md mx-auto bg-white p-6 rounded-lg ">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Actualiza el estado de tu pedido</h2>
+        <form id="editarForm" class="space-y-4">
+            <div>
+                <label for="nombre" class="block text-sm font-medium text-gray-600">Cliente:</label>
+                <input [(ngModel)]="username" type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre del usuario"
+                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none"
+                    required>
+            </div>
 
-        <div>
-            <label for="contraseña" class="block text-sm font-medium text-gray-600">Estado del envio:</label>
-            <input [(ngModel)]="estado_de_envio" type="text" id="contraseña" name="contraseña" list="estado_de_envioList" autocomplete="off" autocorrect="off" spellcheck="false" 
-             placeholder="Selecciona el estado del pedido"
-                class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
-                <datalist id="estado_de_envioList">
-                    <option value="Pendiente"></option>
-                    <option value="En progreso"></option>
-                    <option value="Entregado"></option>
-                </datalist>
-        </div>
+            <div>
+                <label for="contraseña" class="block text-sm font-medium text-gray-600">Estado del envio:</label>
+                <input [(ngModel)]="estado_de_envio" type="text" id="contraseña" name="contraseña" list="estado_de_envioList" autocomplete="off" autocorrect="off" spellcheck="false" 
+                placeholder="Selecciona el estado del pedido"
+                    class="w-full mt-1 p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none">
+                    <datalist id="estado_de_envioList">
+                        <option value="Pendiente"></option>
+                        <option value="En progreso"></option>
+                        <option value="Entregado"></option>
+                    </datalist>
+            </div>
 
-        <button (click)="editUser()" type="submit"
-            class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
-            Guardar Cambios
-        </button>
-    </form>
-</div>
+            <button (click)="editUser()" type="submit"
+                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
+                Guardar Cambios
+            </button>
+        </form>
+    </div>
+
+    <span class="top"></span>
+    <span class="right"></span>
+    <span class="bottom"></span>
+    <span class="left"></span>
+
+</article>
+
+

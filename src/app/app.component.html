@@ -1,50 +1,50 @@
-<nav class="bg-black text-white p-4">
-  <div class="container mx-auto flex justify-between items-center">
-      <div>
-        <a routerLink="/" class="text-white font-bold text-xl">TechLogistics S.A.</a>  </div>
-      <ul class="flex space-x-4">
-        <li >
-          <a [routerLink]="['list-users']" routerLinkActive="active"
-             class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium">
-              Usuarios
-          </a>
-        </li>
-        <li >
-            <a [routerLink]="['log-in']" routerLinkActive="active"
-               class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium">
-                Ingreso
-            </a>
-          </li>
-          <li >
-            <a [routerLink]="['registration']" routerLinkActive="active"
-               class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium">
-                Registro
-            </a>
-          </li>
-          <li >
-            <a [routerLink]="['search']" routerLinkActive="active"
-               class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium">
-                Buscar
-            </a>
-          </li>
-        
-      
-        <li >
-            <a [routerLink]="['update']" routerLinkActive="active"
-               class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium">
-                Actualizar
-            </a>
-          </li>
-          <li >
-            <a [routerLink]="['delete']" routerLinkActive="active"
-               class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium">
-                Borrar
-            </a>
-          </li>
-      </ul>
-      </div>
-  </nav>
-  
-<router-outlet />
+<nav class="bg-black text-white shadow-md shadow-gray-700">
+  <div class="container mx-auto p-4 flex justify-between items-center">
+    <div>
+      <a routerLink="/" class="text-white font-bold text-xl logo-title no-underline" 
+         style="text-shadow: 1px 1px 2px #444;">TechLogistics S.A.</a>
+    </div>
+    <ul class="flex space-x-4">
+      <li>
+        <a [routerLink]="['list-users']" routerLinkActive="active"
+           class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium no-underline">
+          Usuarios
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['log-in']" routerLinkActive="active"
+           class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium no-underline">
+          Ingreso
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['registration']" routerLinkActive="active"
+           class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium no-underline">
+          Registro
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['search']" routerLinkActive="active"
+           class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium no-underline">
+          Buscar
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['update']" routerLinkActive="active"
+           class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium no-underline">
+          Actualizar
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['delete']" routerLinkActive="active"
+           class="text-gray-300 hover:text-white px-3 py-2 rounded-md font-medium no-underline">
+          Borrar
+        </a>
+      </li>
+    </ul>
+  </div>
 
+  <div class="border-t border-black-600"></div>
+</nav>
 
+<router-outlet />

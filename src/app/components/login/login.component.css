@@ -10,9 +10,9 @@
 
 .card {
   position: relative;
-  width: 300px;
+  width: 400px;
   height: 300px;
-  color: #fff;
+  color: #000000;
   background: transparent;
   overflow: hidden;
   border-top: 1px solid rgba(255, 49, 49, 0.5);
@@ -25,7 +25,7 @@
   align-items: center;
   padding: 1em;
   margin: auto;
-  background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
+  background: rgb(255, 255, 255); /* Fondo semitransparente */
   backdrop-filter: blur(10px); /* Difumina el fondo detrás de la tarjeta */
 }
 
@@ -168,19 +168,25 @@ span {
     height: 100%;
   }
 }
+
 button {
-  background-color: #000000; /* Green */
-  border: none;
-  color: rgb(255, 255, 255);
-  padding: 8px 15px;
+  background-color: #000000; /* Fondo negro */
+  border: 2px solid #ffffff; /* Borde blanco */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 15px rgba(55, 59, 59, 0.8); /* Sombra iluminada */
 }
+
 button:hover {
-  background-color: #555555; /* Green */
-  color: white;
+  background-color: #2e2d2d; /* Cambio a blanco */
+  box-shadow: 0px 0px 15px rgba(55, 59, 59, 0.8); /* Aumenta la iluminación en hover */
 }
