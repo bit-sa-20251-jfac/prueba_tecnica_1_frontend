@@ -2,19 +2,28 @@
 <br>
 <br>
 <br>
-<br>
 <div class="flex flex-wrap justify-center gap-6">
-    <div *ngFor="let user of users" class="bg-white shadow-lg rounded-xl p-6 border border-gray-200 w-80 text-center">
-        <h2 class="text-xl font-bold text-gray-800 mb-4">Cliente: {{ user.username }}</h2>
-        <ul class="space-y-2">
-            <li><span class="font-semibold text-gray-700">ID:</span> {{ user._id }}</li>
-            <li><span class="font-semibold text-gray-700">Pedidos:</span> {{ user.pedidos }}</li>
-            <li><span class="font-semibold text-gray-700">Productos:</span> {{ user.productos }}</li>
-            <li><span class="font-semibold text-gray-700">Categoria:</span> {{ user.categorias }}</li>
-            <li><span class="font-semibold text-gray-700">Transportistas:</span> {{ user.transportistas }}</li>
-            <li><span class="font-semibold text-gray-700">Rutas:</span> {{ user.rutas }}</li>
-            <li><span class="font-semibold text-gray-700">Estado de Envío:</span> {{ user.estado_de_envio }}</li>
-
-        </ul>
+    <div class="container">
+        <div class="cards">
+            <div *ngFor="let user of users; let i = index" class="card">
+                <div class="card__color-box" 
+                    [ngStyle]="{ 'background-color': getColor(i), 
+                                 'border': '3px solid ' + getColor(i), 
+                                 'box-shadow': '0px 0px 30px 5px ' + getColor(i) + '80' }">
+                </div>
+                <div class="card__info">
+                    <h2 class="card__title">Cliente: {{ user.username }}</h2>
+                    <ul>
+                        <li><strong>ID:</strong> {{ user._id }}</li>
+                        <li><strong>Pedidos:</strong> {{ user.pedidos }}</li>
+                        <li><strong>Productos:</strong> {{ user.productos }}</li>
+                        <li><strong>Categoría:</strong> {{ user.categorias }}</li>
+                        <li><strong>Transportistas:</strong> {{ user.transportistas }}</li>
+                        <li><strong>Rutas:</strong> {{ user.rutas }}</li>
+                        <li><strong>Estado de Envío:</strong> {{ user.estado_de_envio }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
